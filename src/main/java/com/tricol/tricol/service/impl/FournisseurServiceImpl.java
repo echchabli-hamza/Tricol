@@ -34,6 +34,8 @@ public class FournisseurServiceImpl implements FournisseurService {
 
 
         Fournisseur saved = fournisseurRepository.save(entity);
+
+        saved.setEmail(" ");
         return fournisseurMapper.toDto(saved);
     }
 
@@ -43,6 +45,8 @@ public class FournisseurServiceImpl implements FournisseurService {
                 .orElseThrow(() -> new RuntimeException("Fournisseur not found"));
         return fournisseurMapper.toDto(fournisseur);
     }
+
+    ///  new commit
 
     @Override
     public List<FournisseurDTO> findAll() {
