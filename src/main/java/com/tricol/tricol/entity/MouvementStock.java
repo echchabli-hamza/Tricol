@@ -20,11 +20,11 @@ public class MouvementStock {
 
     @ManyToOne
     @JoinColumn(name = "produit_id")
-    private com.tricol.tricol.entity.Produit produit;
+    private Produit produit;
 
     @ManyToOne
     @JoinColumn(name = "commande_id")
     private CommandeFournisseur commande;
 
-    // Getters and setters
+
 }

@@ -1,6 +1,6 @@
 package com.tricol.tricol.entity;
 
-import com.tricol.tricol.entities.Fournisseur;
+import com.tricol.tricol.entity.Fournisseur;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -32,5 +32,5 @@ public class CommandeFournisseur {
     )
     private List<Produit> produits;
 
-    // Getters and setters
+
 }
