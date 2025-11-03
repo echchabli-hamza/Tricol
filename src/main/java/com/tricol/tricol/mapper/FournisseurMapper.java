@@ -1,16 +1,12 @@
 package com.tricol.tricol.mapper;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
 import com.tricol.tricol.dto.FournisseurDTO;
 import com.tricol.tricol.entity.Fournisseur;
+import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+
+@Mapper(componentModel = "spring", uses = {CommandeFournisseurSimpleMapper.class})
 public interface FournisseurMapper {
-
-    FournisseurMapper INSTANCE = Mappers.getMapper(FournisseurMapper.class);
-
     FournisseurDTO toDto(Fournisseur fournisseur);
-
     Fournisseur toEntity(FournisseurDTO dto);
 }

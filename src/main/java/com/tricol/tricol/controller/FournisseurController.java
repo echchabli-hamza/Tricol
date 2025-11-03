@@ -2,10 +2,9 @@ package com.tricol.tricol.controller;
 
 import com.tricol.tricol.dto.FournisseurDTO;
 import com.tricol.tricol.service.FournisseurService;
+import com.tricol.tricol.service.MyService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.tricol.tricol.service.MyService;
 
 import java.util.List;
 
@@ -16,14 +15,13 @@ public class FournisseurController {
     private final FournisseurService fournisseurService;
     private final MyService myService;
 
-    public FournisseurController(FournisseurService fournisseurService , MyService myService) {
+    public FournisseurController(FournisseurService fournisseurService, MyService myService) {
         this.fournisseurService = fournisseurService;
         this.myService = myService;
     }
 
     @PostMapping
     public ResponseEntity<FournisseurDTO> create(@RequestBody FournisseurDTO dto) {
-
         FournisseurDTO saved = fournisseurService.save(dto);
         return ResponseEntity.ok(saved);
     }

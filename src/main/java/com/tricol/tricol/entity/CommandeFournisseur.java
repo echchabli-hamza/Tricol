@@ -1,24 +1,21 @@
 package com.tricol.tricol.entity;
 
-import com.tricol.tricol.entity.Fournisseur;
 import jakarta.persistence.*;
-import java.math.BigDecimal;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.List;
+@Data
 
 @Entity
 public class CommandeFournisseur {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private LocalDate dateCommande;
-
-    @Enumerated(EnumType.STRING)
-    private StatutCommande statut;
-
-    private BigDecimal montantTotal;
+    private String statut;
+    private Double montantTotal;
 
     @ManyToOne
     @JoinColumn(name = "fournisseur_id")
@@ -32,5 +29,5 @@ public class CommandeFournisseur {
     )
     private List<Produit> produits;
 
-
+    // Getters and Setters
 }

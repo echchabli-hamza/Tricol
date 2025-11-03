@@ -1,12 +1,13 @@
 package com.tricol.tricol.entity;
 
-import com.tricol.tricol.entity.CommandeFournisseur;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.List;
+
 
 @Entity
 public class Fournisseur {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,7 +20,7 @@ public class Fournisseur {
     private String ville;
     private String ice;
 
-    @OneToMany(mappedBy = "fournisseur")
+    @OneToMany(mappedBy = "fournisseur", cascade = CascadeType.ALL)
     private List<CommandeFournisseur> commandes;
 
     public String getAdresse() {
@@ -28,46 +29,6 @@ public class Fournisseur {
 
     public void setAdresse(String adresse) {
         this.adresse = adresse;
-    }
-
-    public String getVille() {
-        return ville;
-    }
-
-    public void setVille(String ville) {
-        this.ville = ville;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getSociete() {
-        return societe;
-    }
-
-    public void setSociete(String societe) {
-        this.societe = societe;
-    }
-
-    public String getIce() {
-        return ice;
-    }
-
-    public void setIce(String ice) {
-        this.ice = ice;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public List<CommandeFournisseur> getCommandes() {
@@ -86,11 +47,51 @@ public class Fournisseur {
         this.contact = contact;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getIce() {
+        return ice;
+    }
+
+    public void setIce(String ice) {
+        this.ice = ice;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getSociete() {
+        return societe;
+    }
+
+    public void setSociete(String societe) {
+        this.societe = societe;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
     }
 }
