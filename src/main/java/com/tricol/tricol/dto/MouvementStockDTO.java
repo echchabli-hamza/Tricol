@@ -1,15 +1,16 @@
 package com.tricol.tricol.dto;
 
-import java.time.LocalDate;
+
+import java.sql.Date;
 
 public class MouvementStockDTO {
     private Long id;
     private Long produitId;
-    private String type; // ENTREE / SORTIE
-    private Integer quantite;
-    private LocalDate dateMouvement;
+    private String type;
+    private Integer quantity;
+    private Date datemovements;
 
-    // Optional: if movement was generated from a supplier order
+
     private Long commandeFournisseurId;
 
     // Getters and Setters
@@ -34,18 +35,21 @@ public class MouvementStockDTO {
         this.type = type;
     }
 
-    public Integer getQuantite() {
-        return quantite;
+
+
+    public Integer getQuantity() {
+        return quantity;
     }
-    public void setQuantite(Integer quantite) {
-        this.quantite = quantite;
+    public void setQuantity(Integer quantite) {
+        this.quantity = quantite;
     }
 
-    public LocalDate getDateMouvement() {
-        return dateMouvement;
+    public Date getDatemovements() {
+        return datemovements;
     }
-    public void setDateMouvement(LocalDate dateMouvement) {
-        this.dateMouvement = dateMouvement;
+
+    public void setDatemovements(Date  datemovements) {
+        this.datemovements = datemovements;
     }
 
     public Long getCommandeFournisseurId() {

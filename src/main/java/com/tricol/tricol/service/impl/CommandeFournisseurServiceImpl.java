@@ -9,7 +9,7 @@ import com.tricol.tricol.repository.*;
 import com.tricol.tricol.service.CommandeFournisseurService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
+import java.sql.Date;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -62,18 +62,18 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
             throw new RuntimeException("Produits " + missingIds + " n'existent pas");
         }
 
-        // 4. Fetch fournisseur
+
         Fournisseur fournisseur = fournisseurRepository.findById(inputDTO.getFournisseurId())
                 .orElseThrow(() -> new RuntimeException("Fournisseur n'existe pas"));
 
-        // 5. Create and save the Commande
+
         CommandeFournisseur commande = new CommandeFournisseur();
         commande.setDateCommande(inputDTO.getDateCommande());
         commande.setFournisseur(fournisseur);
         commande.setProduits(produits);
         commande = commandeFournisseurRepository.save(commande);
         double total = 0.0;
-        // 6. For each product, record movement (ENTRÉE)
+
         for (ProduitQuantiteDTO pq : inputDTO.getProduits()) {
 
             Produit produit = produits.stream()
@@ -112,6 +112,8 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
                 mouvement.setProduit(produit);
                 mouvement.setType(TypeMouvement.SORTIE);
                 mouvement.setQuantity(pq.getQuantite());
+                mouvement.setCommandeFournisseur(commande);
+                mouvement.setDatemovements(new Date(System.currentTimeMillis()));
                 mouvementStockRepository.save(mouvement);
             }
 

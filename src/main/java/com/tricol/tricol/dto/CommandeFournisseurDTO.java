@@ -13,7 +13,8 @@ public class CommandeFournisseurDTO {
     private Long fournisseurId;
 
 
-    private List<ProduitCommandeDTO> produits;
+   // private List<ProduitCommandeDTO> produits;
+    private List<MouvementStockDTO> mouvements;
 
     public LocalDate getDateCommande() {
         return dateCommande;
@@ -47,13 +48,13 @@ public class CommandeFournisseurDTO {
         this.montantTotal = montantTotal;
     }
 
-    public List<ProduitCommandeDTO> getProduits() {
-        return produits;
-    }
-
-    public void setProduits(List<ProduitCommandeDTO> produits) {
-        this.produits = produits;
-    }
+//    public List<ProduitCommandeDTO> getProduits() {
+//        return produits;
+//    }
+//
+//    public void setProduits(List<ProduitCommandeDTO> produits) {
+//        this.produits = produits;
+//    }
 
     public String getStatut() {
         return statut;
@@ -61,5 +62,13 @@ public class CommandeFournisseurDTO {
 
     public void setStatut(String statut) {
         this.statut = statut;
+    }
+
+    public List<MouvementStockDTO> getMouvements() {
+        return mouvements;
+    }
+
+    public void setMouvements(List<MouvementStockDTO> mouvements) {
+        this.mouvements = mouvements;
     }
 }

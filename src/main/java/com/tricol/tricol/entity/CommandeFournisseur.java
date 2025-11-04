@@ -29,6 +29,10 @@ public class CommandeFournisseur {
     )
     private List<Produit> produits;
 
+    @OneToMany(mappedBy = "commandeFournisseur", cascade = CascadeType.ALL)
+    private List<MouvementStock> mouvements;
+
+
     public LocalDate getDateCommande() {
         return dateCommande;
     }
@@ -75,5 +79,13 @@ public class CommandeFournisseur {
 
     public void setStatut(String statut) {
         this.statut = statut;
+    }
+
+    public List<MouvementStock> getMouvements() {
+        return mouvements;
+    }
+
+    public void setMouvements(List<MouvementStock> mouvements) {
+        this.mouvements = mouvements;
     }
 }
