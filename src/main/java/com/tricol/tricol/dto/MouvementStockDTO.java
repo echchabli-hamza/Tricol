@@ -51,7 +51,7 @@ public class MouvementStockDTO {
     public void setDatemovements(Date  datemovements) {
         this.datemovements = datemovements;
     }
-
+         
     public Long getCommandeFournisseurId() {
         return commandeFournisseurId;
     }
