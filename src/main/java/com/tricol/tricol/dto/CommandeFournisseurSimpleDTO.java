@@ -9,7 +9,7 @@ public class CommandeFournisseurSimpleDTO {
     private String statut;
     private Double montantTotal;
 
-    // Getters and Setters
+
     public Long getId() {
         return id;
     }

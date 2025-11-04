@@ -26,12 +26,7 @@ public class ProduitController {
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
-    // Update an existing product
-    @PutMapping("/{id}")
-    public ResponseEntity<ProduitStockDTO> update(@PathVariable Long id, @RequestBody ProduitStockDTO dto) {
-        ProduitStockDTO updated = produitService.update(id, dto);
-        return ResponseEntity.ok(updated);
-    }
+
 
     // Get a product by ID
     @GetMapping("/{id}")

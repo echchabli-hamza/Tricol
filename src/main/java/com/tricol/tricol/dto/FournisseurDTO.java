@@ -12,10 +12,11 @@ public class FournisseurDTO {
     private String ville;
     private String ice;
 
-    // Add: list of commandes
+
     private List<CommandeFournisseurSimpleDTO> commandes;
 
-    // --- Getters and Setters ---
+
+
     public Long getId() {
         return id;
     }

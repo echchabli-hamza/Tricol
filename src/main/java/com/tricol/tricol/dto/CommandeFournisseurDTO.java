@@ -12,7 +12,7 @@ public class CommandeFournisseurDTO {
     private Double montantTotal;
     private Long fournisseurId;
 
-    // Each product in this order
+
     private List<ProduitCommandeDTO> produits;
 
     public LocalDate getDateCommande() {

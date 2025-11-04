@@ -3,10 +3,13 @@ package  com.tricol.tricol.service.impl;
 import com.tricol.tricol.dto.ProductCostDTO;
 import com.tricol.tricol.dto.ProduitDTO;
 import com.tricol.tricol.dto.ProduitStockDTO;
+import com.tricol.tricol.entity.MouvementStock;
 import com.tricol.tricol.entity.ProductCost;
 import com.tricol.tricol.entity.Produit;
+import com.tricol.tricol.entity.TypeMouvement;
 import com.tricol.tricol.mapper.ProductCostMapper;
 import com.tricol.tricol.mapper.ProduitMapper;
+import com.tricol.tricol.repository.MouvementStockRepository;
 import com.tricol.tricol.repository.ProductCostRepository;
 import com.tricol.tricol.repository.ProduitRepository;
 import com.tricol.tricol.service.ProduitService;
@@ -25,13 +28,16 @@ public class ProduitServiceImpl implements ProduitService {
 
     private final ProductCostMapper productCostMapper ;
 
+    private final MouvementStockRepository mouvementStockRepository;
+
 
     public ProduitServiceImpl(ProduitRepository produitRepository,
-                              ProductCostRepository productCostRepository , ProduitMapper produitMapper, ProductCostMapper productCostMapper) {
+                              ProductCostRepository productCostRepository , ProduitMapper produitMapper, ProductCostMapper productCostMapper, MouvementStockRepository mouvementStockRepository) {
         this.produitRepository = produitRepository;
         this.productCostRepository = productCostRepository;
         this.produitMapper = produitMapper;
         this.productCostMapper = productCostMapper;
+        this.mouvementStockRepository = mouvementStockRepository;
     }
 
     @Override
@@ -55,8 +61,13 @@ public class ProduitServiceImpl implements ProduitService {
             cost.setTotalUnits(dto.getTotalUnits());
             cost.setRemainingUnits(dto.getRemainingUnits() != null ? dto.getRemainingUnits() : dto.getTotalUnits());
             productCostRepository.save(cost);
-        }
 
+            MouvementStock mouvement = new MouvementStock();
+            mouvement.setProduit(produit);
+            mouvement.setType(TypeMouvement.ENTREE); // Enum: ENTREE / SORTIE
+            mouvement.setQuantity(dto.getTotalUnits());
+            mouvementStockRepository.save(mouvement);
+        }
         return buildProduitStockDTO(produit);
     }
 
@@ -112,28 +123,7 @@ public class ProduitServiceImpl implements ProduitService {
         produitRepository.deleteById(id);
     }
 
-    @Override
-    @Transactional
-    public ProduitStockDTO update(Long id, ProduitStockDTO dto) {
-        Produit produit = produitRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Produit not found"));
 
-        produit.setNom(dto.getNom());
-        produit.setDescription(dto.getDescription());
-        produit.setCategorie(dto.getCategorie());
-        produitRepository.save(produit);
-
-        if (dto.getTotalUnits() != null && dto.getTotalUnits() > 0) {
-            ProductCost cost = new ProductCost();
-            cost.setProduit(produit);
-            cost.setPrixUnitaire(dto.getPrixUnitaire());
-            cost.setTotalUnits(dto.getTotalUnits());
-            cost.setRemainingUnits(dto.getRemainingUnits() != null ? dto.getRemainingUnits() : dto.getTotalUnits());
-            productCostRepository.save(cost);
-        }
-
-        return buildProduitStockDTO(produit);
-    }
 
 
     private ProduitStockDTO buildProduitStockDTO(Produit produit) {

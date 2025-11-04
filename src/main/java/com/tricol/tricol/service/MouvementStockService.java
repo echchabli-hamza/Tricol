@@ -8,4 +8,5 @@ public interface MouvementStockService {
     MouvementStockDTO findById(Long id);
     List<MouvementStockDTO> findAll();
     void delete(Long id);
+    List<MouvementStockDTO> findByProduitId(Long produitId);
 }
