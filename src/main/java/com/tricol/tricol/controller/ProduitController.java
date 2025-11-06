@@ -3,6 +3,8 @@ package com.tricol.tricol.controller;
 import com.tricol.tricol.dto.ProduitDTO;
 import com.tricol.tricol.dto.ProduitStockDTO;
 import com.tricol.tricol.service.ProduitService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -37,9 +39,8 @@ public class ProduitController {
 
     // Get all products
     @GetMapping
-    public ResponseEntity<List<ProduitDTO>> getAll() {
-        List<ProduitDTO> produits = produitService.findAll();
-        return ResponseEntity.ok(produits);
+    public Page<ProduitDTO> getAll(Pageable pageable) {
+       return produitService.findAll(pageable);
     }
 
     // Delete a product by ID

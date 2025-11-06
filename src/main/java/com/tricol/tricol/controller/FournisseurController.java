@@ -3,9 +3,11 @@ package com.tricol.tricol.controller;
 import com.tricol.tricol.dto.FournisseurDTO;
 import com.tricol.tricol.service.FournisseurService;
 import com.tricol.tricol.service.MyService;
+import org.hibernate.query.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 @RestController
@@ -33,9 +35,9 @@ public class FournisseurController {
     }
 
     @GetMapping
-    public ResponseEntity<List<FournisseurDTO>> getAll() {
-        List<FournisseurDTO> fournisseurs = fournisseurService.findAll();
-        return ResponseEntity.ok(fournisseurs);
+    public Page<FournisseurDTO> getAll(Pageable pageable) {
+        return  fournisseurService.findAll(pageable);
+
     }
 
     @DeleteMapping("/{id}")

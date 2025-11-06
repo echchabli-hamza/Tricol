@@ -7,6 +7,8 @@ import com.tricol.tricol.mapper.MouvementStockMapper;
 import com.tricol.tricol.repository.MouvementStockRepository;
 import com.tricol.tricol.repository.ProduitRepository;
 import com.tricol.tricol.service.MouvementStockService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -55,6 +57,14 @@ public class MouvementStockServiceImpl implements MouvementStockService {
                 .map(mouvementStockMapper::toDto)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public Page<MouvementStockDTO> findAllM(Pageable pageable) {
+        return mouvementStockRepository.findAll(pageable)
+                .map(mouvementStockMapper::toDto);
+    }
+
+
     @Override
     public List<MouvementStockDTO> findByProduitId(Long produitId) {
         return mouvementStockRepository.findByProduitId(produitId).stream()

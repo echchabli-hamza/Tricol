@@ -6,6 +6,9 @@ import com.tricol.tricol.mapper.FournisseurMapper;
 import com.tricol.tricol.repository.FournisseurRepository;
 import com.tricol.tricol.service.FournisseurService;
 import com.tricol.tricol.service.MyService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,12 +52,16 @@ public class FournisseurServiceImpl implements FournisseurService {
     }
 
     @Override
-    public List<FournisseurDTO> findAll() {
-        return fournisseurRepository.findAll()
-                .stream()
-                .map(fournisseurMapper::toDto)
-                .collect(Collectors.toList());
-    }
+  public Page<FournisseurDTO> findAll(Pageable pageable) {
+    Page<Fournisseur> fournisseursPage = fournisseurRepository.findAll(pageable);
+
+    List<FournisseurDTO> dtos = fournisseursPage.stream()
+            .map(fournisseurMapper::toDto)
+            .collect(Collectors.toList());
+
+    return new PageImpl<>(dtos, pageable, fournisseursPage.getTotalElements());
+}
+
 
     @Override
     public void delete(Long id) {

@@ -14,6 +14,9 @@ import com.tricol.tricol.repository.ProductCostRepository;
 import com.tricol.tricol.repository.ProduitRepository;
 import com.tricol.tricol.service.ProduitService;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -94,27 +97,56 @@ public class ProduitServiceImpl implements ProduitService {
         return dto;
     }
 
-    @Override
-    public List<ProduitDTO> findAll() {
-        return produitRepository.findAll().stream().map(produit -> {
-            // Map basic product fields
-            ProduitDTO dto = produitMapper.toDto(produit);
+//    @Override
+//    public List<ProduitDTO> findAll() {
+//        return produitRepository.findAll().stream().map(produit -> {
+//            // Map basic product fields
+//            ProduitDTO dto = produitMapper.toDto(produit);
+//
+//            // Map product costs
+//            List<ProductCostDTO> costs = produit.getCosts().stream()
+//                    .map(productCostMapper::toDto)
+//                    .collect(Collectors.toList());
+//            dto.setCosts(costs);
+//
+//            // Compute stock total
+//            int stockTotal = costs.stream()
+//                    .mapToInt(ProductCostDTO::getRemainingUnits)
+//                    .sum();
+//            dto.setStockTotal(stockTotal);
+//
+//            return dto;
+//        }).collect(Collectors.toList());
+//    }
 
-            // Map product costs
-            List<ProductCostDTO> costs = produit.getCosts().stream()
-                    .map(productCostMapper::toDto)
-                    .collect(Collectors.toList());
-            dto.setCosts(costs);
 
-            // Compute stock total
-            int stockTotal = costs.stream()
-                    .mapToInt(ProductCostDTO::getRemainingUnits)
-                    .sum();
-            dto.setStockTotal(stockTotal);
+@Override
+public Page<ProduitDTO> findAll(Pageable pageable) {
+    Page<Produit> produitsPage = produitRepository.findAll(pageable);
 
-            return dto;
-        }).collect(Collectors.toList());
-    }
+    List<ProduitDTO> dtos = produitsPage.stream().map(produit -> {
+        // Map basic product fields
+        ProduitDTO dto = produitMapper.toDto(produit);
+
+        // Map product costs
+        List<ProductCostDTO> costs = produit.getCosts().stream()
+                .map(productCostMapper::toDto)
+                .collect(Collectors.toList());
+        dto.setCosts(costs);
+
+        // Compute stock total
+        int stockTotal = costs.stream()
+                .mapToInt(ProductCostDTO::getRemainingUnits)
+                .sum();
+        dto.setStockTotal(stockTotal);
+
+        return dto;
+    }).collect(Collectors.toList());
+
+    // Return as a Page<ProduitDTO>
+    return new PageImpl<>(dtos, pageable, produitsPage.getTotalElements());
+}
+
 
     @Override
     @Transactional

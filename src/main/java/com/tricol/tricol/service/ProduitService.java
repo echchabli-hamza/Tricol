@@ -2,6 +2,8 @@ package com.tricol.tricol.service;
 
 import com.tricol.tricol.dto.ProduitDTO;
 import com.tricol.tricol.dto.ProduitStockDTO;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -10,7 +12,7 @@ public interface ProduitService {
 
     ProduitDTO findById(Long id);
 
-    List<ProduitDTO> findAll();
+    Page<ProduitDTO> findAll(Pageable pageable);
 
     void delete(Long id);
 
