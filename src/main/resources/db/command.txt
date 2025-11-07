@@ -1,0 +1,5 @@
+./mvnw liquibase:generateChangeLog \
+  -Dliquibase.url=jdbc:postgresql://localhost:5432/tricol \
+  -Dliquibase.username=postgres \
+  -Dliquibase.password=1111 \
+  -Dliquibase.outputChangeLogFile=src/main/resources/db/changelog/initial-schema.xml
