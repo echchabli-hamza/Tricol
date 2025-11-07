@@ -7,6 +7,9 @@ import com.tricol.tricol.entity.*;
 import com.tricol.tricol.mapper.CommandeFournisseurMapper;
 import com.tricol.tricol.repository.*;
 import com.tricol.tricol.service.CommandeFournisseurService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.sql.Date;
@@ -129,18 +132,20 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
     }
 
     @Override
-    public List<CommandeFournisseurDTO> findAll() {
-        return commandeFournisseurRepository.findAll()
-                .stream()
+    public Page<CommandeFournisseurDTO> findAll(Pageable pageable) {
+        Page<CommandeFournisseur>  res= commandeFournisseurRepository.findAll(pageable) ;
+
+               List<CommandeFournisseurDTO> liste = res.stream()
                 .map(commandeFournisseurMapper::toDto)
                 .collect(Collectors.toList());
+        return new PageImpl<>(liste, pageable, res.getTotalElements());
     }
 
     @Override
     @Transactional
     public CommandeFournisseurDTO deliverCommande(Long commandeId) {
 
-        // 1. Fetch the commande
+
         CommandeFournisseur commande = commandeFournisseurRepository.findById(commandeId)
                 .orElseThrow(() -> new RuntimeException("Commande non trouvée"));
 
@@ -148,7 +153,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
             throw new RuntimeException("Commande déjà traitée ou annulée");
         }
 
-        // 2. Retrieve all mouvements for this commande
+
         List<MouvementStock> mouvements = mouvementStockRepository.findByCommandeFournisseurId(commandeId);
 
         double total = 0.0;
@@ -159,7 +164,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
             Produit produit = mouvement.getProduit();
             int restant = mouvement.getQuantity();
 
-            // 3. Fetch batches with remaining stock
+
             List<ProductCost> batches = productCostRepository
                     .findByProduitIdAndRemainingUnitsGreaterThanOrderByIdAsc(produit.getId(), 0);
 
@@ -194,7 +199,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
     @Transactional
     public CommandeFournisseurDTO updateCommandeProduits(Long commandeId, List<ProduitQuantiteDTO> produitsMaj) {
 
-        // 1. Fetch existing commande
+
         CommandeFournisseur commande = commandeFournisseurRepository.findById(commandeId)
                 .orElseThrow(() -> new RuntimeException("Commande non trouvée"));
 
@@ -202,20 +207,20 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
             throw new RuntimeException("Impossible de modifier une commande déjà livrée ou annulée");
         }
 
-        // 2. Get current produits
+
         List<Produit> produitsExistants = commande.getProduits();
 
-        // 3. Convert to map for quick access
+
         Map<Long, Produit> mapProduitsExistants = produitsExistants.stream()
                 .collect(Collectors.toMap(Produit::getId, p -> p));
 
-        // 4. Process incoming list
+
         for (ProduitQuantiteDTO pq : produitsMaj) {
 
             Produit produit = produitRepository.findById(pq.getProduitId())
                     .orElseThrow(() -> new RuntimeException("Produit avec ID " + pq.getProduitId() + " introuvable"));
 
-            // 5. If product already exists in commande → update mouvement quantity
+
             Optional<MouvementStock> existingMouvement = mouvementStockRepository
                     .findByCommandeFournisseurIdAndProduitId(commandeId, produit.getId());
 
@@ -224,7 +229,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
                 mouvement.setQuantity(pq.getQuantite());
                 mouvementStockRepository.save(mouvement);
             } else {
-                // 6. Otherwise → add new mouvement and link produit
+
                 MouvementStock newMvt = new MouvementStock();
                 newMvt.setProduit(produit);
                 newMvt.setCommandeFournisseur(commande);
@@ -239,7 +244,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
             }
         }
 
-        // 7. Update commande’s product list
+
         commande.setProduits(produitsExistants);
         commande = commandeFournisseurRepository.save(commande);
 

@@ -4,6 +4,8 @@ import com.tricol.tricol.dto.CommandeFournisseurDTO;
 import com.tricol.tricol.dto.CommandeFournisseurInputDTO;
 import com.tricol.tricol.dto.ProduitQuantiteDTO;
 import com.tricol.tricol.service.CommandeFournisseurService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +22,7 @@ public class CommandeFournisseurController {
         this.commandeFournisseurService = commandeFournisseurService;
     }
 
+
     @PostMapping
     public ResponseEntity<?> create(@RequestBody CommandeFournisseurInputDTO inputDTO) {
         try {
@@ -31,8 +34,8 @@ public class CommandeFournisseurController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CommandeFournisseurDTO>> getAll() {
-        return ResponseEntity.ok(commandeFournisseurService.findAll());
+    public ResponseEntity<Page<CommandeFournisseurDTO>> getAll(Pageable pageable) {
+        return ResponseEntity.ok(commandeFournisseurService.findAll( pageable));
     }
 
     @GetMapping("/{id}")

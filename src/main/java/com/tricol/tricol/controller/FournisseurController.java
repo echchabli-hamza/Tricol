@@ -3,12 +3,12 @@ package com.tricol.tricol.controller;
 import com.tricol.tricol.dto.FournisseurDTO;
 import com.tricol.tricol.service.FournisseurService;
 import com.tricol.tricol.service.MyService;
-import org.hibernate.query.Page;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.awt.print.Pageable;
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 
 @RestController
 @RequestMapping("/api/fournisseurs")
