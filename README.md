@@ -2,8 +2,10 @@
 
 ![Spring Boot](# Tricol - Supplier Orders Management API
 
-![Planification](https://echchablihamza1-1758101303053.atlassian.net/jira/software/projects/TRIC/boards/35/calendar?date=2025-10-01)
-![Diagram de class](https://lucid.app/lucidchart/e93244c1-696c-463f-ad84-a206b2813ebd/edit?invitationId=inv_60abb0e4-c01e-4818-b7d2-91f75e704ec6&page=0_0#)
+![Planification] : 
+https://echchablihamza1-1758101303053.atlassian.net/jira/software/projects/TRIC/boards/35
+![Diagram de class] 
+https://lucid.app/lucidchart/e93244c1-696c-463f-ad84-a206b2813ebd/edit?invitationId=inv_60abb0e4-c01e-4818-b7d2-91f75e704ec6&page=0_0#
 
 ## Overview
 
