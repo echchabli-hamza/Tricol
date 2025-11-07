@@ -1,6 +1,7 @@
 package com.tricol.tricol.service;
 
 import com.tricol.tricol.dto.MouvementStockDTO;
+import com.tricol.tricol.entity.TypeMouvement;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,4 +16,5 @@ public interface MouvementStockService {
     Page<MouvementStockDTO> findAllM(Pageable pageable);
 
     List<MouvementStockDTO> findByProduitId(Long produitId);
+    List<MouvementStockDTO> filter(TypeMouvement state);
 }

@@ -2,19 +2,24 @@ package com.tricol.tricol.service.impl;
 
 import com.tricol.tricol.dto.CommandeFournisseurDTO;
 import com.tricol.tricol.dto.CommandeFournisseurInputDTO;
+import com.tricol.tricol.dto.MouvementStockDTO;
 import com.tricol.tricol.dto.ProduitQuantiteDTO;
 import com.tricol.tricol.entity.*;
+import com.tricol.tricol.filter.CommandSpecification;
 import com.tricol.tricol.mapper.CommandeFournisseurMapper;
 import com.tricol.tricol.repository.*;
 import com.tricol.tricol.service.CommandeFournisseurService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.sql.Date;
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static com.tricol.tricol.filter.CommandSpecification.hasState;
 
 @Service
 @Transactional
@@ -251,6 +256,24 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
         return commandeFournisseurMapper.toDto(commande);
     }
 
+
+    public List<CommandeFournisseurDTO> filter(StatutCommande s) {
+
+        Specification<CommandeFournisseur> spec = null;
+
+        if (s==null){
+
+          spec=  CommandSpecification.hasState(s);
+
+        }
+
+        List<CommandeFournisseur> liste=(spec == null) ? commandeFournisseurRepository.findAll() : commandeFournisseurRepository.findAll(spec);
+
+
+        return liste.stream().map(commandeFournisseurMapper::toDto).peek(e->
+            e.setMouvements(null)).toList();
+
+    }
 
 
 }

@@ -2,6 +2,7 @@ package com.tricol.tricol.service;
 
 import com.tricol.tricol.dto.ProduitDTO;
 import com.tricol.tricol.dto.ProduitStockDTO;
+import com.tricol.tricol.entity.Produit;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,5 +16,7 @@ public interface ProduitService {
     Page<ProduitDTO> findAll(Pageable pageable);
 
     void delete(Long id);
+
+    List<Produit> filter(String nom, String categorie);
 
 }

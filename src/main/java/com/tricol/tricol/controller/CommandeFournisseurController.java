@@ -3,7 +3,10 @@ package com.tricol.tricol.controller;
 import com.tricol.tricol.dto.CommandeFournisseurDTO;
 import com.tricol.tricol.dto.CommandeFournisseurInputDTO;
 import com.tricol.tricol.dto.ProduitQuantiteDTO;
+import com.tricol.tricol.entity.CommandeFournisseur;
+import com.tricol.tricol.entity.StatutCommande;
 import com.tricol.tricol.service.CommandeFournisseurService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -24,7 +27,7 @@ public class CommandeFournisseurController {
 
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody CommandeFournisseurInputDTO inputDTO) {
+    public ResponseEntity<?> create(@Valid @RequestBody CommandeFournisseurInputDTO inputDTO) {
         try {
             CommandeFournisseurDTO saved = commandeFournisseurService.save(inputDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(saved);
@@ -62,5 +65,11 @@ public class CommandeFournisseurController {
         }
     }
 
+    @GetMapping("/filter")
+    public List<CommandeFournisseurDTO> filter(@RequestParam("state") String s ){
+
+        return commandeFournisseurService.filter(StatutCommande.valueOf(s));
+
+    }
 
 }

@@ -32,16 +32,16 @@ public class FournisseurServiceImpl implements FournisseurService {
 
     @Override
     public FournisseurDTO save(FournisseurDTO dto) {
-        // Optional logging / service call
+
         myService.doSomething(dto.toString());
 
-        // Convert DTO → Entity
+
         Fournisseur entity = fournisseurMapper.toEntity(dto);
 
-        // Save to DB
+
         Fournisseur saved = fournisseurRepository.save(entity);
 
-        // Convert Entity → DTO
+
         return fournisseurMapper.toDto(saved);
     }
 

@@ -3,12 +3,16 @@ package com.tricol.tricol.service.impl;
 import com.tricol.tricol.dto.MouvementStockDTO;
 import com.tricol.tricol.entity.MouvementStock;
 import com.tricol.tricol.entity.Produit;
+import com.tricol.tricol.entity.TypeMouvement;
+import com.tricol.tricol.filter.MouvementStockSpecification;
+import com.tricol.tricol.filter.ProduitSpecification;
 import com.tricol.tricol.mapper.MouvementStockMapper;
 import com.tricol.tricol.repository.MouvementStockRepository;
 import com.tricol.tricol.repository.ProduitRepository;
 import com.tricol.tricol.service.MouvementStockService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -70,6 +74,21 @@ public class MouvementStockServiceImpl implements MouvementStockService {
         return mouvementStockRepository.findByProduitId(produitId).stream()
                 .map(mouvementStockMapper::toDto)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<MouvementStockDTO> filter(TypeMouvement state){
+
+        Specification<MouvementStock> spec = null;
+
+        if ( state != null) {
+            spec = MouvementStockSpecification.hasType(state);
+        }
+
+       List<MouvementStock> liste=(spec == null) ? mouvementStockRepository.findAll() : mouvementStockRepository.findAll(spec);
+
+        return liste.stream().map(mouvementStockMapper::toDto).toList();
+
     }
 
     @Override

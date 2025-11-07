@@ -2,8 +2,9 @@ package com.tricol.tricol.repository;
 
 import com.tricol.tricol.entity.Produit;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface ProduitRepository extends JpaRepository<Produit, Long> {
+public interface ProduitRepository extends JpaRepository<Produit, Long>, JpaSpecificationExecutor<Produit> {
 
      Produit findByNom(String nom);
 }

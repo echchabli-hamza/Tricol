@@ -4,8 +4,10 @@ import com.tricol.tricol.dto.MouvementStockDTO;
 import com.tricol.tricol.dto.ProductStockReportDTO;
 import com.tricol.tricol.entity.MouvementStock;
 import com.tricol.tricol.entity.ProductCost;
+import com.tricol.tricol.entity.TypeMouvement;
 import com.tricol.tricol.repository.MouvementStockRepository;
 import com.tricol.tricol.repository.ProductCostRepository;
+import com.tricol.tricol.service.MouvementStockService;
 import com.tricol.tricol.service.impl.CalculService;
 import com.tricol.tricol.service.impl.MouvementStockServiceImpl;
 import org.springframework.data.domain.Page;
@@ -49,6 +51,12 @@ public class MouvementStockController {
     }
 
 
+
+    @GetMapping("/mvm/filter")
+    public  List<MouvementStockDTO> filterMVM(@RequestParam("type") String s){
+
+        return mouvementStockServiceImpl.filter(TypeMouvement.valueOf(s));
+    }
 
 
 

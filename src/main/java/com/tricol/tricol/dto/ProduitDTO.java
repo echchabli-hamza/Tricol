@@ -1,21 +1,25 @@
 package com.tricol.tricol.dto;
 
-
+import jakarta.validation.constraints.*;
 import java.util.List;
 
 public class ProduitDTO {
     private Long id;
+    @NotBlank(message = "nom is required")
     private String nom;
+    @NotBlank(message = "description is required")
     private String description;
+    @NotBlank(message = "description is required")
     private String categorie;
 
-    // Optional derived data
-    private Double prixMoyen; // average cost or price if you want to show it
-    private Integer stockTotal; // total from remainingUnits or mouvements
+    @NotBlank(message = "description is required")
+    private Double prixMoyen;
+    @NotBlank(message = "description is required")
+    private Integer stockTotal;
 
-    // Relationships
-    private List<ProductCostDTO> costs; // all cost batches
-    private List<MouvementStockDTO> mouvements; // all stock movements
+
+    private List<ProductCostDTO> costs;
+    private List<MouvementStockDTO> mouvements;
 
     // Getters and Setters
     public Long getId() {

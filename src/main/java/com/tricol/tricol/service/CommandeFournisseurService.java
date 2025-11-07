@@ -3,6 +3,7 @@ package com.tricol.tricol.service;
 import com.tricol.tricol.dto.CommandeFournisseurDTO;
 import com.tricol.tricol.dto.CommandeFournisseurInputDTO;
 import com.tricol.tricol.dto.ProduitQuantiteDTO;
+import com.tricol.tricol.entity.StatutCommande;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,4 +16,5 @@ public interface CommandeFournisseurService {
     CommandeFournisseurDTO deliverCommande(Long commandeId);
 
     CommandeFournisseurDTO updateCommandeProduits(Long id, List<ProduitQuantiteDTO> produitsMaj);
+    List<CommandeFournisseurDTO> filter(StatutCommande s);
 }

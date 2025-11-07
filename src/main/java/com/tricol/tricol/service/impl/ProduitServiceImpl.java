@@ -17,7 +17,12 @@ import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import com.tricol.tricol.filter.ProduitSpecification;
+
+
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -125,16 +130,16 @@ public Page<ProduitDTO> findAll(Pageable pageable) {
     Page<Produit> produitsPage = produitRepository.findAll(pageable);
 
     List<ProduitDTO> dtos = produitsPage.stream().map(produit -> {
-        // Map basic product fields
+
         ProduitDTO dto = produitMapper.toDto(produit);
 
-        // Map product costs
+
         List<ProductCostDTO> costs = produit.getCosts().stream()
                 .map(productCostMapper::toDto)
                 .collect(Collectors.toList());
         dto.setCosts(costs);
 
-        // Compute stock total
+
         int stockTotal = costs.stream()
                 .mapToInt(ProductCostDTO::getRemainingUnits)
                 .sum();
@@ -143,7 +148,7 @@ public Page<ProduitDTO> findAll(Pageable pageable) {
         return dto;
     }).collect(Collectors.toList());
 
-    // Return as a Page<ProduitDTO>
+
     return new PageImpl<>(dtos, pageable, produitsPage.getTotalElements());
 }
 
@@ -183,4 +188,20 @@ public Page<ProduitDTO> findAll(Pageable pageable) {
 
         return dto;
     }
+
+    public List<Produit> filter(String nom, String categorie) {
+        Specification<Produit> spec = null;
+
+        if (nom != null) {
+            spec = ProduitSpecification.hasNom(nom);
+        }
+
+        if (categorie != null) {
+            spec = (spec == null) ? ProduitSpecification.hasCategorie(categorie)
+                    : spec.and(ProduitSpecification.hasCategorie(categorie));
+        }
+
+        return (spec == null) ? produitRepository.findAll() : produitRepository.findAll(spec);
+    }
+
 }
