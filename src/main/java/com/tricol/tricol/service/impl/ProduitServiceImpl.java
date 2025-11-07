@@ -72,7 +72,7 @@ public class ProduitServiceImpl implements ProduitService {
 
             MouvementStock mouvement = new MouvementStock();
             mouvement.setProduit(produit);
-            mouvement.setType(TypeMouvement.ENTREE); // Enum: ENTREE / SORTIE
+            mouvement.setType(TypeMouvement.ENTREE);
             mouvement.setQuantity(dto.getTotalUnits());
             mouvementStockRepository.save(mouvement);
         }
@@ -105,16 +105,14 @@ public class ProduitServiceImpl implements ProduitService {
 //    @Override
 //    public List<ProduitDTO> findAll() {
 //        return produitRepository.findAll().stream().map(produit -> {
-//            // Map basic product fields
+//
 //            ProduitDTO dto = produitMapper.toDto(produit);
 //
-//            // Map product costs
+//
 //            List<ProductCostDTO> costs = produit.getCosts().stream()
 //                    .map(productCostMapper::toDto)
 //                    .collect(Collectors.toList());
 //            dto.setCosts(costs);
-//
-//            // Compute stock total
 //            int stockTotal = costs.stream()
 //                    .mapToInt(ProductCostDTO::getRemainingUnits)
 //                    .sum();

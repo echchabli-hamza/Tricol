@@ -125,7 +125,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
 
         }
         commande.setStatut("EN_ATTENTE");
-        //commande.setMontantTotal(total);
+
         return commandeFournisseurMapper.toDto(commande);
     }
 
@@ -192,7 +192,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
             }
         }
 
-        // 4. Update commande status to LIVRÉE and total
+
         commande.setStatut("LIVRÉE");
         commande.setMontantTotal(total);
         commandeFournisseurRepository.save(commande);
