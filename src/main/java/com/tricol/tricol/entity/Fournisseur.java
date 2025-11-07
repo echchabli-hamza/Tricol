@@ -15,6 +15,7 @@ public class Fournisseur {
     private String societe;
     private String adresse;
     private String contact;
+    @Column(unique = true)
     private String email;
     private String telephone;
     private String ville;

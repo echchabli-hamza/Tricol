@@ -4,6 +4,7 @@ import com.tricol.tricol.dto.FournisseurDTO;
 import com.tricol.tricol.service.FournisseurService;
 import com.tricol.tricol.service.MyService;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Page;
@@ -23,7 +24,8 @@ public class FournisseurController {
     }
 
     @PostMapping
-    public ResponseEntity<FournisseurDTO> create(@RequestBody FournisseurDTO dto) {
+    public ResponseEntity<FournisseurDTO> create(@Valid @RequestBody FournisseurDTO dto) {
+        dto.setId(null);
         FournisseurDTO saved = fournisseurService.save(dto);
         return ResponseEntity.ok(saved);
     }

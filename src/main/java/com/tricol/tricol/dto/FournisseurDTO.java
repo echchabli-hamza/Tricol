@@ -1,12 +1,15 @@
 package com.tricol.tricol.dto;
 
 import java.util.List;
+import jakarta.validation.constraints.*;
+
 
 public class FournisseurDTO {
     private Long id;
     private String societe;
     private String adresse;
     private String contact;
+    @NotBlank(message = "Email is required")
     private String email;
     private String telephone;
     private String ville;
