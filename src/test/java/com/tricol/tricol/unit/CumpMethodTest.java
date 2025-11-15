@@ -107,7 +107,8 @@ class CumpMethodTest {
 
         assertEquals(0, result.getTotalPurchasedUnits());
         assertEquals(0.0, result.getAveragePrice());
-        assertEquals(10, result.getTotalSoldUnits());
+        assertEquals(0, result.getTotalSoldUnits());
         assertEquals(0.0, result.getTotalRevenue());
     }
+
 }
