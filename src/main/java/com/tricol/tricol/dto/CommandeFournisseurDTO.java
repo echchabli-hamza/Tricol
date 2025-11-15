@@ -13,7 +13,6 @@ public class CommandeFournisseurDTO {
     private Long fournisseurId;
 
 
-   // private List<ProduitCommandeDTO> produits;
     private List<MouvementStockDTO> mouvements;
 
     public LocalDate getDateCommande() {

@@ -2,7 +2,6 @@ package com.tricol.tricol.service.impl;
 
 import com.tricol.tricol.dto.CommandeFournisseurDTO;
 import com.tricol.tricol.dto.CommandeFournisseurInputDTO;
-import com.tricol.tricol.dto.MouvementStockDTO;
 import com.tricol.tricol.dto.ProduitQuantiteDTO;
 import com.tricol.tricol.entity.*;
 import com.tricol.tricol.filter.CommandSpecification;
@@ -18,8 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.sql.Date;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static com.tricol.tricol.filter.CommandSpecification.hasState;
 
 @Service
 @Transactional
@@ -272,6 +269,27 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
 
         return liste.stream().map(commandeFournisseurMapper::toDto).peek(e->
             e.setMouvements(null)).toList();
+
+    }
+
+
+
+    public Double  getClientCommand(Long id){
+
+        Optional<Fournisseur> res = fournisseurRepository.findById(id);
+        if (res.isPresent()){
+            return commandeFournisseurRepository.findAll().stream()
+                    .filter(e->e.getFournisseur().equals(res.get()))
+                    .mapToDouble(e->e.getMontantTotal())
+                    .sum();
+
+
+
+        }
+        else
+            return 0.0;
+
+
 
     }
 
