@@ -1401,3 +1401,1105 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2025-11-16 13:18:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-16 13:18:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-11-16 13:18:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:23:07 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:23:07 [main] INFO  c.t.tricol.TricolApplicationTests - Starting TricolApplicationTests using Java 21.0.9 with PID 391114 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:23:07 [main] DEBUG c.t.tricol.TricolApplicationTests - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:23:07 [main] INFO  c.t.tricol.TricolApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:23:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:23:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:23:09 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-16 13:23:09 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-16 13:23:09 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-16 13:23:10 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-16 13:23:10 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-16 13:23:10 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-16 13:23:10 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.5.2
+  API Version: 1.51
+  Operating System: Debian GNU/Linux 13 (trixie)
+  Total Memory: 15401 MB
+2025-11-16 13:23:10 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-16 13:23:10 [main] INFO  o.t.utility.RegistryAuthLocator - Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.12.0, configFile: /home/hamza/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/hamza/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2025-11-16 13:23:11 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: 751e9fbdd08b635c2585291ec75435ba2fa8b483ad4103e87004ff463cfb1346
+2025-11-16 13:23:11 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.558143708S
+2025-11-16 13:23:11 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-16 13:23:11 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-16 13:23:11 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-16 13:23:11 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-11-16 13:23:11 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: f454ef4c17786eddf352adbd8d26243685498925eedcec6e177c2dd5f76db0e9
+2025-11-16 13:23:12 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT0.957153199S
+2025-11-16 13:23:12 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:32841/test?loggerLevel=OFF)
+2025-11-16 13:23:12 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:23:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:23:12 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:23:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:23:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:23:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2032ad89
+2025-11-16 13:23:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:23:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:23:13 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:23:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:23:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:23:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:23:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:23:15 [main] INFO  c.t.tricol.TricolApplicationTests - Started TricolApplicationTests in 8.571 seconds (process running for 10.524)
+2025-11-16 13:23:16 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.MouvementStockControllerIntegrationTest]: MouvementStockControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:23:16 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.MouvementStockControllerIntegrationTest
+2025-11-16 13:23:16 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:23:16 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Starting MouvementStockControllerIntegrationTest using Java 21.0.9 with PID 391114 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:23:16 [main] DEBUG c.t.t.i.MouvementStockControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:23:16 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:23:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:23:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:23:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:23:16 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:23:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:23:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-16 13:23:17 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@3facdde8
+2025-11-16 13:23:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-16 13:23:17 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:23:17 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:23:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:23:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:23:17 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:23:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:23:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:23:17 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Started MouvementStockControllerIntegrationTest in 1.747 seconds (process running for 12.67)
+2025-11-16 13:23:18 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:23:18 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:23:18 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: f09af2a99b67f954e890e8fcfe948772cb412aef717ea0f4ba58f3c30182f478
+2025-11-16 13:23:19 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT0.962986421S
+2025-11-16 13:23:19 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32842/testdb?loggerLevel=OFF)
+2025-11-16 13:23:19 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.ProduitControllerIntegrationTest]: ProduitControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:23:19 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.ProduitControllerIntegrationTest
+2025-11-16 13:23:19 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:23:19 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Starting ProduitControllerIntegrationTest using Java 21.0.9 with PID 391114 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:23:19 [main] DEBUG c.t.t.i.ProduitControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:23:19 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:23:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:23:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:23:20 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:23:20 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:23:20 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:23:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-16 13:23:20 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@69bcbbf2
+2025-11-16 13:23:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-16 13:23:20 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:23:20 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:23:20 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:23:20 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:23:20 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:23:20 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:23:20 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:23:20 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:23:20 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:23:20 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Started ProduitControllerIntegrationTest in 0.901 seconds (process running for 15.567)
+2025-11-16 13:23:21 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:23:21 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:23:21 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: e467c5feee23f684a62801305b7480b24e077aa4386f1c7dd48fcf20dc86a14c
+2025-11-16 13:23:22 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT0.974001096S
+2025-11-16 13:23:22 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32843/testdb?loggerLevel=OFF)
+2025-11-16 13:23:22 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.FournisseurControllerIntegrationTest]: FournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:23:22 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.FournisseurControllerIntegrationTest
+2025-11-16 13:23:22 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:23:22 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Starting FournisseurControllerIntegrationTest using Java 21.0.9 with PID 391114 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:23:22 [main] DEBUG c.t.t.i.FournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:23:22 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:23:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:23:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:23:22 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:23:22 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:23:22 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:23:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-16 13:23:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@3b185d98
+2025-11-16 13:23:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-16 13:23:22 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:23:22 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:23:22 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:23:22 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:23:22 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:23:22 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:23 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:23:23 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:23:23 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:23:23 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-11-16 13:23:23 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Started FournisseurControllerIntegrationTest in 0.491 seconds (process running for 17.988)
+2025-11-16 13:23:23 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:23:23 [main] INFO  com.tricol.tricol.service.MyService - User FournisseurDTO{id=null, societe='Societe A', adresse='123 rue Exemple', contact='Fournisseur A', email='fournisseur@example.com', telephone='0600000000', ville='Casablanca', ice='ICE123456', commandes=0} called doSomething
+2025-11-16 13:23:23 [main] DEBUG com.tricol.tricol.service.MyService - Debug info: example debug data
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-16 13:23:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-16 13:30:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:30:48 [main] INFO  c.t.tricol.TricolApplicationTests - Starting TricolApplicationTests using Java 21.0.9 with PID 393026 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:30:48 [main] DEBUG c.t.tricol.TricolApplicationTests - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:30:48 [main] INFO  c.t.tricol.TricolApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:30:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:30:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:30:50 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-16 13:30:50 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-16 13:30:50 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-16 13:30:50 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-16 13:30:51 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-16 13:30:51 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-16 13:30:51 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.5.2
+  API Version: 1.51
+  Operating System: Debian GNU/Linux 13 (trixie)
+  Total Memory: 15401 MB
+2025-11-16 13:30:51 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-16 13:30:51 [main] INFO  o.t.utility.RegistryAuthLocator - Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.12.0, configFile: /home/hamza/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/hamza/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2025-11-16 13:30:51 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: 27164c83d6de27e9f3fdd2b0d299f0898e348c770ffcf86e32ef3b83d36457e8
+2025-11-16 13:30:51 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.434849908S
+2025-11-16 13:30:51 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-16 13:30:51 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-16 13:30:51 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-16 13:30:51 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-11-16 13:30:51 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: c21c8a6ec3231f847d27b44b695f1e02bd2b8db51c27a9ca226c864a15676e6d
+2025-11-16 13:30:52 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT0.932588059S
+2025-11-16 13:30:52 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:32845/test?loggerLevel=OFF)
+2025-11-16 13:30:52 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:30:52 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:30:52 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:30:53 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:30:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:30:53 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@655c97da
+2025-11-16 13:30:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:30:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:30:53 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:30:54 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:30:54 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:30:54 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:30:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:30:55 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:30:55 [main] INFO  c.t.tricol.TricolApplicationTests - Started TricolApplicationTests in 7.761 seconds (process running for 9.365)
+2025-11-16 13:30:56 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.MouvementStockControllerIntegrationTest]: MouvementStockControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:30:56 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.MouvementStockControllerIntegrationTest
+2025-11-16 13:30:56 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:30:56 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Starting MouvementStockControllerIntegrationTest using Java 21.0.9 with PID 393026 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:30:56 [main] DEBUG c.t.t.i.MouvementStockControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:30:56 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:30:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:30:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:30:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:30:56 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:30:56 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:30:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-16 13:30:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@41806110
+2025-11-16 13:30:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-16 13:30:57 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:30:57 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:30:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:30:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:30:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:30:58 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:30:58 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:30:58 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-11-16 13:30:58 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Started MouvementStockControllerIntegrationTest in 1.93 seconds (process running for 11.71)
+2025-11-16 13:30:59 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:30:59 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:30:59 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 0b65b0987c3d19357a386912e33da8d309cbbe3e85473e66d1c94066dc8b4539
+2025-11-16 13:31:00 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.086432442S
+2025-11-16 13:31:00 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32846/testdb?loggerLevel=OFF)
+2025-11-16 13:31:00 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.ProduitControllerIntegrationTest]: ProduitControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:31:00 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.ProduitControllerIntegrationTest
+2025-11-16 13:31:00 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:31:00 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Starting ProduitControllerIntegrationTest using Java 21.0.9 with PID 393026 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:31:00 [main] DEBUG c.t.t.i.ProduitControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:31:00 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:31:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:31:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:31:01 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:31:01 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:31:01 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:31:01 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-16 13:31:01 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@e4fddb3
+2025-11-16 13:31:01 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-16 13:31:01 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:31:01 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:31:01 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:31:01 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:31:01 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:31:01 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:01 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:31:01 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:31:01 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:31:01 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-11-16 13:31:01 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Started ProduitControllerIntegrationTest in 1.263 seconds (process running for 15.262)
+2025-11-16 13:31:02 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:31:02 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:31:02 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: eb04645535bdbf0fab0b877ff2b0a0f2525f1b0868717ca2f375fd5f4b3547f5
+2025-11-16 13:31:03 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT0.993949679S
+2025-11-16 13:31:03 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32847/testdb?loggerLevel=OFF)
+2025-11-16 13:31:03 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.FournisseurControllerIntegrationTest]: FournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:31:03 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.FournisseurControllerIntegrationTest
+2025-11-16 13:31:03 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:31:03 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Starting FournisseurControllerIntegrationTest using Java 21.0.9 with PID 393026 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:31:03 [main] DEBUG c.t.t.i.FournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:31:03 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:31:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:31:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:31:04 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:31:04 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:31:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:31:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-16 13:31:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@624917e2
+2025-11-16 13:31:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-16 13:31:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:31:04 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:31:04 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:31:04 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:31:04 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:31:04 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:31:04 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:31:04 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:31:04 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:31:04 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Started FournisseurControllerIntegrationTest in 0.634 seconds (process running for 17.931)
+2025-11-16 13:31:04 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:31:04 [main] INFO  com.tricol.tricol.service.MyService - User FournisseurDTO{id=null, societe='Societe A', adresse='123 rue Exemple', contact='Fournisseur A', email='fournisseur@example.com', telephone='0600000000', ville='Casablanca', ice='ICE123456', commandes=0} called doSomething
+2025-11-16 13:31:04 [main] DEBUG com.tricol.tricol.service.MyService - Debug info: example debug data
+2025-11-16 13:31:04 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest]: CommandeFournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:31:04 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest
+2025-11-16 13:31:04 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:31:04 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Starting CommandeFournisseurControllerIntegrationTest using Java 21.0.9 with PID 393026 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:31:04 [main] DEBUG c.t.t.i.CommandeFournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:31:04 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:31:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:31:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:31:05 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:31:05 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:31:05 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:31:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-11-16 13:31:05 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@dfbb070
+2025-11-16 13:31:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-11-16 13:31:05 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:31:05 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:31:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:31:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:05 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:31:05 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:31:05 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:31:05 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-11-16 13:31:05 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Started CommandeFournisseurControllerIntegrationTest in 0.744 seconds (process running for 19.182)
+2025-11-16 13:31:05 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:31:06 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:31:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-16 13:31:07 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-11-16 13:35:27 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:35:27 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Starting CommandeFournisseurControllerIntegrationTest using Java 21.0.9 with PID 394266 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:35:27 [main] DEBUG c.t.t.i.CommandeFournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:35:27 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:35:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:35:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:35:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:35:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:35:29 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:35:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:35:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:35:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2346f77a
+2025-11-16 13:35:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:35:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:35:30 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:35:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:35:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:35:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:35:32 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:35:32 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:35:32 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:35:32 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Started CommandeFournisseurControllerIntegrationTest in 5.316 seconds (process running for 6.375)
+2025-11-16 13:35:32 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:35:32 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:35:32 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:36:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:36:12 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Starting CommandeFournisseurControllerIntegrationTest using Java 21.0.9 with PID 394407 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:36:12 [main] DEBUG c.t.t.i.CommandeFournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:36:12 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:36:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:36:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:36:14 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:36:14 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:36:14 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:36:14 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:36:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:36:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68b3979d
+2025-11-16 13:36:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:36:15 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:36:15 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:36:16 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:36:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:36:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:36:17 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:36:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:36:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-11-16 13:36:17 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Started CommandeFournisseurControllerIntegrationTest in 5.346 seconds (process running for 6.371)
+2025-11-16 13:36:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:36:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:36:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:36:59 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:36:59 [main] INFO  c.t.tricol.TricolApplicationTests - Starting TricolApplicationTests using Java 21.0.9 with PID 394648 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:36:59 [main] DEBUG c.t.tricol.TricolApplicationTests - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:36:59 [main] INFO  c.t.tricol.TricolApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:37:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:37:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 92 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:37:01 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-16 13:37:01 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-16 13:37:01 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-16 13:37:01 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-16 13:37:02 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-16 13:37:02 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-16 13:37:02 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.5.2
+  API Version: 1.51
+  Operating System: Debian GNU/Linux 13 (trixie)
+  Total Memory: 15401 MB
+2025-11-16 13:37:02 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-16 13:37:02 [main] INFO  o.t.utility.RegistryAuthLocator - Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.12.0, configFile: /home/hamza/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/hamza/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2025-11-16 13:37:02 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: b385284ae9461e8826f8d005b19e4b668ab4381354567692f1982976cfb56b40
+2025-11-16 13:37:02 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.454069949S
+2025-11-16 13:37:02 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-16 13:37:02 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-16 13:37:02 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-16 13:37:02 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-11-16 13:37:02 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: 2df30bbc62b2141f9f91e66d87fa333a29d39928595e205aaf598bc9a5f8d476
+2025-11-16 13:37:03 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT0.98505758S
+2025-11-16 13:37:03 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:32849/test?loggerLevel=OFF)
+2025-11-16 13:37:03 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:37:03 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:37:03 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:37:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:37:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:37:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25f92ffd
+2025-11-16 13:37:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:37:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:37:04 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:37:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:37:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:37:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:37:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:06 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:37:06 [main] INFO  c.t.tricol.TricolApplicationTests - Started TricolApplicationTests in 7.852 seconds (process running for 9.656)
+2025-11-16 13:37:07 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.MouvementStockControllerIntegrationTest]: MouvementStockControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:37:07 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.MouvementStockControllerIntegrationTest
+2025-11-16 13:37:07 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:37:07 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Starting MouvementStockControllerIntegrationTest using Java 21.0.9 with PID 394648 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:37:07 [main] DEBUG c.t.t.i.MouvementStockControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:37:07 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:37:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:37:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:37:07 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:37:07 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:37:07 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:37:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-16 13:37:08 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5fcc0f6
+2025-11-16 13:37:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-16 13:37:08 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:37:08 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:37:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:37:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:37:09 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:37:09 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:37:09 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-11-16 13:37:09 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Started MouvementStockControllerIntegrationTest in 2.162 seconds (process running for 12.237)
+2025-11-16 13:37:10 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:37:10 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:37:10 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 200b3da53b9e79cc17f22a858a34a748686d2b632a2392a518939857249eb7f6
+2025-11-16 13:37:11 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.138154992S
+2025-11-16 13:37:11 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32850/testdb?loggerLevel=OFF)
+2025-11-16 13:37:11 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.ProduitControllerIntegrationTest]: ProduitControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:37:11 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.ProduitControllerIntegrationTest
+2025-11-16 13:37:11 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:37:11 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Starting ProduitControllerIntegrationTest using Java 21.0.9 with PID 394648 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:37:11 [main] DEBUG c.t.t.i.ProduitControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:37:11 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:37:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:37:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:37:12 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:37:12 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:37:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:37:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-16 13:37:12 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@74472a22
+2025-11-16 13:37:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-16 13:37:12 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:37:12 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:37:12 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:37:12 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:37:12 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:37:12 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:12 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:37:12 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:37:12 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:37:12 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:37:12 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Started ProduitControllerIntegrationTest in 0.911 seconds (process running for 15.369)
+2025-11-16 13:37:13 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:37:13 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:37:13 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 672533f999901213d080cf38da37624abbe796747bf305bd10b9e60305811489
+2025-11-16 13:37:14 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.123430566S
+2025-11-16 13:37:14 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32851/testdb?loggerLevel=OFF)
+2025-11-16 13:37:14 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.FournisseurControllerIntegrationTest]: FournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:37:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.FournisseurControllerIntegrationTest
+2025-11-16 13:37:14 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:37:14 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Starting FournisseurControllerIntegrationTest using Java 21.0.9 with PID 394648 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:37:14 [main] DEBUG c.t.t.i.FournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:37:14 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:37:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:37:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:37:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:37:15 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:37:15 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:37:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-16 13:37:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@620879c1
+2025-11-16 13:37:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-16 13:37:15 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:37:15 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:37:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:37:15 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:37:15 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:37:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:37:15 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:37:15 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:37:15 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-11-16 13:37:15 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Started FournisseurControllerIntegrationTest in 0.669 seconds (process running for 18.269)
+2025-11-16 13:37:15 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:37:15 [main] INFO  com.tricol.tricol.service.MyService - User FournisseurDTO{id=null, societe='Societe A', adresse='123 rue Exemple', contact='Fournisseur A', email='fournisseur@example.com', telephone='0600000000', ville='Casablanca', ice='ICE123456', commandes=0} called doSomething
+2025-11-16 13:37:15 [main] DEBUG com.tricol.tricol.service.MyService - Debug info: example debug data
+2025-11-16 13:37:15 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest]: CommandeFournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:37:15 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest
+2025-11-16 13:37:15 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:37:15 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Starting CommandeFournisseurControllerIntegrationTest using Java 21.0.9 with PID 394648 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:37:15 [main] DEBUG c.t.t.i.CommandeFournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:37:15 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:37:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:37:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:37:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:37:16 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:37:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:37:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-11-16 13:37:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5eb80d88
+2025-11-16 13:37:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-11-16 13:37:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:37:16 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:37:16 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:37:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:37:16 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:37:16 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:37:16 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-11-16 13:37:16 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Started CommandeFournisseurControllerIntegrationTest in 0.718 seconds (process running for 19.544)
+2025-11-16 13:37:16 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:37:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:37:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-16 13:37:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-11-16 13:38:39 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:38:39 [main] INFO  c.t.tricol.TricolApplicationTests - Starting TricolApplicationTests using Java 21.0.9 with PID 395738 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:38:39 [main] DEBUG c.t.tricol.TricolApplicationTests - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:38:39 [main] INFO  c.t.tricol.TricolApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:38:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:38:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:38:41 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-16 13:38:41 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-16 13:38:41 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-16 13:38:41 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-16 13:38:42 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-16 13:38:42 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-16 13:38:42 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.5.2
+  API Version: 1.51
+  Operating System: Debian GNU/Linux 13 (trixie)
+  Total Memory: 15401 MB
+2025-11-16 13:38:42 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-16 13:38:42 [main] INFO  o.t.utility.RegistryAuthLocator - Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.12.0, configFile: /home/hamza/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/hamza/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2025-11-16 13:38:42 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: 418104ce7e0d29fc1a075b0925e45b56eeb1c315015363875ee08d35eeb8369f
+2025-11-16 13:38:42 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.592652842S
+2025-11-16 13:38:42 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-16 13:38:42 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-16 13:38:42 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-16 13:38:42 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-11-16 13:38:42 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: bab6d0c87567237fdcc0f986fb3bca35bf4ec24adffa3fc6dd23722501a5dbef
+2025-11-16 13:38:43 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT1.012990947S
+2025-11-16 13:38:43 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:32853/test?loggerLevel=OFF)
+2025-11-16 13:38:44 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:38:44 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:38:44 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:38:44 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:38:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:38:44 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@542024ac
+2025-11-16 13:38:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:38:44 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:38:44 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:38:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:38:46 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:38:46 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:38:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:47 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:38:47 [main] INFO  c.t.tricol.TricolApplicationTests - Started TricolApplicationTests in 8.617 seconds (process running for 10.847)
+2025-11-16 13:38:48 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.MouvementStockControllerIntegrationTest]: MouvementStockControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:38:48 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.MouvementStockControllerIntegrationTest
+2025-11-16 13:38:48 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:38:48 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Starting MouvementStockControllerIntegrationTest using Java 21.0.9 with PID 395738 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:38:48 [main] DEBUG c.t.t.i.MouvementStockControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:38:48 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:38:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:38:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:38:48 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:38:48 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:38:48 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:38:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-16 13:38:49 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@62197085
+2025-11-16 13:38:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-16 13:38:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:38:49 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:38:49 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:38:49 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:49 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:38:50 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:38:50 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:38:50 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-11-16 13:38:50 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Started MouvementStockControllerIntegrationTest in 1.963 seconds (process running for 13.226)
+2025-11-16 13:38:50 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:38:50 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:38:51 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 84da8a8538d86657853dd9f10f3d370184ae9a729dd541f393d57da5e2dabaf8
+2025-11-16 13:38:51 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT0.985774354S
+2025-11-16 13:38:51 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32854/testdb?loggerLevel=OFF)
+2025-11-16 13:38:51 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.ProduitControllerIntegrationTest]: ProduitControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:38:51 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.ProduitControllerIntegrationTest
+2025-11-16 13:38:51 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:38:52 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Starting ProduitControllerIntegrationTest using Java 21.0.9 with PID 395738 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:38:52 [main] DEBUG c.t.t.i.ProduitControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:38:52 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:38:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:38:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:38:52 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:38:52 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:38:52 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:38:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-16 13:38:52 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@71d797b7
+2025-11-16 13:38:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-16 13:38:52 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:38:52 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:38:52 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:38:52 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:38:52 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:38:52 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:52 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:38:52 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:38:52 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:38:52 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:38:52 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Started ProduitControllerIntegrationTest in 0.752 seconds (process running for 15.869)
+2025-11-16 13:38:53 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:38:53 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:38:53 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 7518c148556550baac4246330593c59d0e4142ba62ee735b218de95d93c44b66
+2025-11-16 13:38:54 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.075676475S
+2025-11-16 13:38:54 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32855/testdb?loggerLevel=OFF)
+2025-11-16 13:38:54 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.FournisseurControllerIntegrationTest]: FournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:38:54 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.FournisseurControllerIntegrationTest
+2025-11-16 13:38:54 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:38:54 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Starting FournisseurControllerIntegrationTest using Java 21.0.9 with PID 395738 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:38:54 [main] DEBUG c.t.t.i.FournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:38:54 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:38:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:38:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:38:55 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:38:55 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:38:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:38:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-16 13:38:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@6c0b6de0
+2025-11-16 13:38:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-16 13:38:55 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:38:55 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:38:55 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:38:55 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:38:55 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:38:55 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:55 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:38:55 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:38:55 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:38:55 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:38:55 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Started FournisseurControllerIntegrationTest in 0.719 seconds (process running for 18.816)
+2025-11-16 13:38:55 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:38:55 [main] INFO  com.tricol.tricol.service.MyService - User FournisseurDTO{id=null, societe='Societe A', adresse='123 rue Exemple', contact='Fournisseur A', email='fournisseur@example.com', telephone='0600000000', ville='Casablanca', ice='ICE123456', commandes=0} called doSomething
+2025-11-16 13:38:55 [main] DEBUG com.tricol.tricol.service.MyService - Debug info: example debug data
+2025-11-16 13:38:56 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest]: CommandeFournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:38:56 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest
+2025-11-16 13:38:56 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:38:56 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Starting CommandeFournisseurControllerIntegrationTest using Java 21.0.9 with PID 395738 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:38:56 [main] DEBUG c.t.t.i.CommandeFournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:38:56 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:38:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:38:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:38:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:38:56 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:38:56 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:38:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-11-16 13:38:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@41ac1ebf
+2025-11-16 13:38:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-11-16 13:38:56 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:38:56 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:38:56 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:38:56 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:56 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:38:57 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:38:57 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:38:57 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:38:57 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Started CommandeFournisseurControllerIntegrationTest in 0.811 seconds (process running for 20.158)
+2025-11-16 13:38:57 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-16 13:38:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2025-11-16 13:39:26 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-16 13:39:26 [main] INFO  c.t.tricol.TricolApplicationTests - Starting TricolApplicationTests using Java 21.0.9 with PID 396853 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:39:26 [main] DEBUG c.t.tricol.TricolApplicationTests - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:39:26 [main] INFO  c.t.tricol.TricolApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:39:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:39:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:39:28 [main] INFO  o.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-16 13:39:28 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-16 13:39:28 [main] INFO  o.testcontainers.DockerClientFactory - Testcontainers version: 1.21.3
+2025-11-16 13:39:28 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-16 13:39:29 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-11-16 13:39:29 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-16 13:39:29 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.5.2
+  API Version: 1.51
+  Operating System: Debian GNU/Linux 13 (trixie)
+  Total Memory: 15401 MB
+2025-11-16 13:39:29 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Creating container for image: testcontainers/ryuk:0.12.0
+2025-11-16 13:39:29 [main] INFO  o.t.utility.RegistryAuthLocator - Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.12.0, configFile: /home/hamza/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /home/hamza/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2025-11-16 13:39:29 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 is starting: 784c10c0ab6cec723c278dbe53fcf9949d534618eefe7d25dde83d473501ccc4
+2025-11-16 13:39:29 [main] INFO  tc.testcontainers/ryuk:0.12.0 - Container testcontainers/ryuk:0.12.0 started in PT0.417244962S
+2025-11-16 13:39:29 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-16 13:39:29 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-16 13:39:29 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-16 13:39:29 [main] INFO  tc.postgres:latest - Creating container for image: postgres:latest
+2025-11-16 13:39:29 [main] INFO  tc.postgres:latest - Container postgres:latest is starting: 19394a109e4799066a24f2f3a35d9b02b77c527a80694a5de1b3bc19e5eec2e1
+2025-11-16 13:39:30 [main] INFO  tc.postgres:latest - Container postgres:latest started in PT0.936107426S
+2025-11-16 13:39:30 [main] INFO  tc.postgres:latest - Container is started (JDBC URL: jdbc:postgresql://localhost:32857/test?loggerLevel=OFF)
+2025-11-16 13:39:30 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:39:31 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-16 13:39:31 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:39:31 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:39:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-16 13:39:31 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67d8057d
+2025-11-16 13:39:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-16 13:39:31 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:39:31 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:39:32 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:39:32 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:39:32 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:39:32 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:33 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:39:34 [main] INFO  c.t.tricol.TricolApplicationTests - Started TricolApplicationTests in 8.144 seconds (process running for 9.881)
+2025-11-16 13:39:34 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.MouvementStockControllerIntegrationTest]: MouvementStockControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:39:34 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.MouvementStockControllerIntegrationTest
+2025-11-16 13:39:34 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:39:34 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Starting MouvementStockControllerIntegrationTest using Java 21.0.9 with PID 396853 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:39:34 [main] DEBUG c.t.t.i.MouvementStockControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:39:34 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:39:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:39:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:39:35 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:39:35 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:39:35 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:39:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-16 13:39:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1b5becaf
+2025-11-16 13:39:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-16 13:39:35 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:39:35 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:39:35 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:39:35 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:36 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:39:36 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:39:36 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:39:36 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:39:36 [main] INFO  c.t.t.i.MouvementStockControllerIntegrationTest - Started MouvementStockControllerIntegrationTest in 1.879 seconds (process running for 12.15)
+2025-11-16 13:39:37 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:39:37 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:39:37 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: df03ae405679159f6969c23cebe946bd8f1d479d3f3bd889207329141df19ee4
+2025-11-16 13:39:39 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.564821911S
+2025-11-16 13:39:39 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32858/testdb?loggerLevel=OFF)
+2025-11-16 13:39:39 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.ProduitControllerIntegrationTest]: ProduitControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:39:39 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.ProduitControllerIntegrationTest
+2025-11-16 13:39:39 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:39:39 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Starting ProduitControllerIntegrationTest using Java 21.0.9 with PID 396853 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:39:39 [main] DEBUG c.t.t.i.ProduitControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:39:39 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:39:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:39:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:39:39 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:39:39 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:39:39 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:39:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2025-11-16 13:39:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@3fb12b09
+2025-11-16 13:39:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2025-11-16 13:39:40 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:39:40 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:39:40 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:39:40 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:39:40 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:39:40 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:40 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:39:40 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:39:40 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:39:40 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-11-16 13:39:40 [main] INFO  c.t.t.i.ProduitControllerIntegrationTest - Started ProduitControllerIntegrationTest in 0.929 seconds (process running for 16.135)
+2025-11-16 13:39:41 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:39:41 [main] INFO  tc.postgres:15 - Creating container for image: postgres:15
+2025-11-16 13:39:41 [main] INFO  tc.postgres:15 - Container postgres:15 is starting: 0df0ab9e3013ab039389a17d5ec993807059c1deb50dadd2013eab57eefeb9fd
+2025-11-16 13:39:42 [main] INFO  tc.postgres:15 - Container postgres:15 started in PT1.02383509S
+2025-11-16 13:39:42 [main] INFO  tc.postgres:15 - Container is started (JDBC URL: jdbc:postgresql://localhost:32859/testdb?loggerLevel=OFF)
+2025-11-16 13:39:42 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.FournisseurControllerIntegrationTest]: FournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:39:42 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.FournisseurControllerIntegrationTest
+2025-11-16 13:39:42 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:39:42 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Starting FournisseurControllerIntegrationTest using Java 21.0.9 with PID 396853 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:39:42 [main] DEBUG c.t.t.i.FournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:39:42 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:39:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:39:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:39:42 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:39:42 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:39:42 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:39:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-11-16 13:39:42 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@1a74f8ab
+2025-11-16 13:39:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-11-16 13:39:42 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:39:42 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:39:43 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:39:43 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-16 13:39:43 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - constraint "ukjbgq4kotuud6g548jycag5qwp" of relation "fournisseur" does not exist, skipping
+2025-11-16 13:39:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:43 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:39:43 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:39:43 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:39:43 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:39:43 [main] INFO  c.t.t.i.FournisseurControllerIntegrationTest - Started FournisseurControllerIntegrationTest in 0.734 seconds (process running for 19.024)
+2025-11-16 13:39:43 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:39:43 [main] INFO  com.tricol.tricol.service.MyService - User FournisseurDTO{id=null, societe='Societe A', adresse='123 rue Exemple', contact='Fournisseur A', email='fournisseur@example.com', telephone='0600000000', ville='Casablanca', ice='ICE123456', commandes=0} called doSomething
+2025-11-16 13:39:43 [main] DEBUG com.tricol.tricol.service.MyService - Debug info: example debug data
+2025-11-16 13:39:43 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest]: CommandeFournisseurControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-16 13:39:43 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tricol.tricol.TricolApplication for test class com.tricol.tricol.integration.CommandeFournisseurControllerIntegrationTest
+2025-11-16 13:39:43 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-11-16 13:39:43 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Starting CommandeFournisseurControllerIntegrationTest using Java 21.0.9 with PID 396853 (started by hamza in /home/hamza/Downloads/tricol)
+2025-11-16 13:39:43 [main] DEBUG c.t.t.i.CommandeFournisseurControllerIntegrationTest - Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-11-16 13:39:43 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 13:39:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-16 13:39:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2025-11-16 13:39:44 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-16 13:39:44 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-16 13:39:44 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-16 13:39:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-11-16 13:39:44 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@695be31e
+2025-11-16 13:39:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-11-16 13:39:44 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-16 13:39:44 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-16 13:39:44 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-16 13:39:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:44 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-16 13:39:44 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-16 13:39:44 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-16 13:39:44 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-16 13:39:44 [main] INFO  c.t.t.i.CommandeFournisseurControllerIntegrationTest - Started CommandeFournisseurControllerIntegrationTest in 0.979 seconds (process running for 20.613)
+2025-11-16 13:39:45 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2025-11-16 13:39:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
