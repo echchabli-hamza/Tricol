@@ -22,7 +22,7 @@ public class Produit {
     @OneToMany(mappedBy = "produit", cascade = CascadeType.ALL)
     private List<ProductCost> costs;
 
-    @OneToMany(mappedBy = "produit", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "produit", cascade = CascadeType.ALL ,  orphanRemoval = true)
     private List<MouvementStock> mouvements;
 
     public String getCategorie() {
